@@ -1,0 +1,18 @@
+# include <stdio.h>
+int swap(int *x,int *y)
+{
+    *x = *x + *y;
+    *y = *x - *y;
+    *x = *x - *y;
+    return *x,*y;
+}
+int main()
+{
+    int a = 0,b = 0;
+    printf("Enter 2 Numbers 'a' and 'b' : \n");
+    scanf("%d %d",&a,&b);
+    printf("Entered Numbers are a = %d and b = %d\n",a,b);
+    swap(&a,&b);
+    printf("After swapping the 2 numbers a = %d and b = %d\n",a,b);
+    return 0;
+}
